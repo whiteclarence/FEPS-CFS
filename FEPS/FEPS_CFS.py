@@ -3085,10 +3085,10 @@ def createCSV(uploadFolder, myTempPath, FeaturesTypeRDO, ComboAAC, ComboAAD,Comb
            maxlag = int(maxLag)
            mat = ''
            if ComboMatrix =="Grantham distance matrix":
-              matrixFile = "../mats/Grantham.csv"
+              matrixFile = "mats/Grantham.csv"
               mat = 'Gran'
            else:
-              matrixFile = "../mats/Schneider-Wrede.csv"
+              matrixFile = "mats/Schneider-Wrede.csv"
               mat = 'SW'
            matrix = pDiscrs.distMatrix(matrixFile)
            fun = DescriptorList(ComboSOC)
@@ -3112,10 +3112,10 @@ def createCSV(uploadFolder, myTempPath, FeaturesTypeRDO, ComboAAC, ComboAAD,Comb
          elif ComboSOC=='Sequence order coupling numbers (matrix)':
            maxlag = int(maxLag)
            if ComboMatrix =="Grantham distance matrix":
-              matrixFile = "../mats/Grantham.csv"
+              matrixFile = "mats/Grantham.csv"
               mat = 'Gran'
            else:
-              matrixFile = "../mats/Schneider-Wrede.csv"
+              matrixFile = "mats/Schneider-Wrede.csv"
               mat = 'SW'
            matrix = pDiscrs.distMatrix(matrixFile)
            fun = DescriptorList(ComboSOC)
@@ -3359,8 +3359,8 @@ def feps(infile, outfile):#main(argv):
     chkUserAAP = [0,1]
     sugFileName = 'S_Features.csv'
     for rdo in FeaturesTypeRDO:
+        print(rdo)
         if rdo == 'ACD':
-            
             for acd in ComboACD:
                 if acd=='Custom Geary autocorrelation with ID' \
                     or acd=='Moran autocorrelation descriptors with ID' \
@@ -3398,7 +3398,6 @@ def feps(infile, outfile):#main(argv):
                                       idNum2 = '', AAproperty = '', kspace = '',  email = '', sugFileName = sugFileName,\
                                       chkUserAAP = '', AAP2 = '')                        
         elif rdo == 'PAAC':
-            print(rdo)
             for paac in ComboPAAC:
                 
                 if paac=='Type I Pseudo amino acid composition' \
@@ -3431,7 +3430,6 @@ def feps(infile, outfile):#main(argv):
                                   sugFileName = sugFileName, chkUserAAP = '', AAP2 = '')
 
         elif rdo == 'SOC':
-            
             Weight = 0.1
             for soc in ComboSOC:
             

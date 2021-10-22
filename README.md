@@ -11,17 +11,16 @@ Then run the following command:
 ```bash
 pip install /path/to/wheelfile.whl
 ```
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+To test that everything install properly run the following command from the FEPS_CFS root directory
 ```bash
-pip install foobar
+python run_feps.py
 ```
 ## Usage
-Once the FEPS library is installed, it can be import using:
+Once the FEPS library is installed, open a Python terminal or file and import it using:
 ```python
 import FEPS.FEPS_CFS as feps
 ```
-Next, we want to create two new directories: One for input (ex: ‘infile’) and another for output (ex: ‘outfile’).  Place the input fasta files inside the ‘infile’ folder (outfile will contain our output).  After this it can be run using:
+Next, we want to create two new directories (in the same directory as the Python program): One for input (ex: ‘infile’) and another for output (ex: ‘outfile’). Place the input fasta files inside the ‘infile’ folder (outfile will contain our output). After this, go back to the Python program and enter the following command:
 ```python
 feps.feps('infile/','outfile/')#update in and out file here
 ```
@@ -31,4 +30,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+[MIT](https://choosealicense.com/licenses/mit/)
